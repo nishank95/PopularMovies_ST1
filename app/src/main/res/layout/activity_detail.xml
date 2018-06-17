@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nishank.android.com.popularmovies_st1.DetailActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/movieBackPathImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:filterTouchesWhenObscured="false"
+            android:fitsSystemWindows="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/i4" />
+
+        <View
+            android:id="@+id/detailViewBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/movieDetailBg" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/detailActivityToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/toolbarColor" />
+
+                <TextView
+                    android:id="@+id/movieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_title"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detailActivityToolbar" />
+
+                <TextView
+                    android:id="@+id/movieRatingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="24dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_rating_label"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/moviePoster"
+                    app:layout_constraintEnd_toStartOf="@+id/moviePoster"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/moviePoster"
+                    tools:text="Rating" />
+
+                <TextView
+                    android:id="@+id/movieVoteLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_vote_label"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/moviePoster"
+                    tools:text="Votes" />
+
+                <TextView
+                    android:id="@+id/movieCategoryLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_category_label"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/moviePoster"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/moviePoster"
+                    app:layout_constraintTop_toTopOf="@+id/moviePoster"
+                    tools:text="Category" />
+
+                <ImageView
+                    android:id="@+id/iv_star"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/movieRating"
+                    app:layout_constraintEnd_toStartOf="@+id/movieRating"
+                    app:layout_constraintStart_toStartOf="@+id/movieRatingLabel"
+                    app:layout_constraintTop_toTopOf="@+id/movieRating"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:srcCompat="@drawable/ic_gold_star" />
+
+                <TextView
+                    android:id="@+id/movieRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_rating"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/movieRatingLabel"
+                    app:layout_constraintStart_toEndOf="@+id/iv_star"
+                    app:layout_constraintTop_toBottomOf="@+id/movieRatingLabel"
+                    tools:text="8.5" />
+
+                <TextView
+                    android:id="@+id/movieVote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_vote"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/movieVoteLabel"
+                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                    app:layout_constraintTop_toBottomOf="@+id/movieVoteLabel"
+                    tools:text="12000" />
+
+                <ImageView
+                    android:id="@+id/iv_certificate"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/movieCategory"
+                    app:layout_constraintEnd_toStartOf="@+id/movieCategory"
+                    app:layout_constraintStart_toStartOf="@+id/movieCategoryLabel"
+                    app:layout_constraintTop_toTopOf="@+id/movieCategory"
+                    app:srcCompat="@drawable/ic_certificate" />
+
+                <TextView
+                    android:id="@+id/movieCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/movie_certificate_adult"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/movieCategoryLabel"
+                    app:layout_constraintStart_toEndOf="@+id/iv_certificate"
+                    app:layout_constraintTop_toBottomOf="@+id/movieCategoryLabel"
+                    tools:text="U/UA" />
+
+                <View
+                    android:id="@+id/dividerView1"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/lightGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movieVote" />
+
+                <ImageView
+                    android:id="@+id/moviePoster"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@drawable/movie_poster_border"
+                    android:contentDescription="@string/movie_poster_image_description"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movieTitle"
+                    app:srcCompat="@drawable/i4" />
+
+                <TextView
+                    android:id="@+id/movieOverviewLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_overview"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerView1" />
+
+
+                <TextView
+                    android:id="@+id/movieOverview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="8"
+                    android:maxLines="15"
+                    android:padding="2dp"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/movieOverviewLabel"
+                    app:layout_constraintStart_toStartOf="@+id/movieOverviewLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/movieOverviewLabel"
+                    tools:text="This is the Movie Overview" />
+
+                <View
+                    android:id="@+id/dividerView2"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/lightGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/movieOverview"
+                    tools:ignore="RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/movieReleaseDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_movie_release_date_label"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dividerView2" />
+
+                <TextView
+                    android:id="@+id/movieReleaseDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/detail_activity_release_date"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/movieReleaseDateLabel"
+                    app:layout_constraintStart_toStartOf="@+id/movieReleaseDateLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/movieReleaseDateLabel" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/movieVote"
+                    app:layout_constraintEnd_toStartOf="@+id/movieVote"
+                    app:layout_constraintStart_toStartOf="@+id/movieVoteLabel"
+                    app:layout_constraintTop_toTopOf="@+id/movieVote"
+                    app:srcCompat="@drawable/ic_vote" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>

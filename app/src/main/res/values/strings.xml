@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">PopularMovies_ST1</string>
+    <string name="app_name">PopularMovies</string>
+    <string name="popular_movies">Popular Movies</string>
+    <string name="top_rated_movies">Top Rated Movies</string>
+    <string name="movie_poster_iv_description">Movie Poster</string>
+    <string name="movie_year">Movie Year</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="set_favourite_iv_description">Set Favourite</string>
+    <string name="detail_activity_movie_title">Movie Title</string>
+    <string name="detail_activity_movie_overview">Movie Overview</string>
+    <string name="detail_activity_category_label">Category</string>
+    <string name="movie_poster_image_description">Movie Poster</string>
+    <string name="detail_activity_movie_release_date_label">Release Date</string>
+    <string name="movie_certificate_adult">A</string>
+    <string name="movie_certificate_non_adult">UA</string>
+    <string name="detail_activity_movie_vote">12000</string>
+    <string name="detail_activity_movie_rating">8.5</string>
+    <string name="detail_menu_like">Like</string>
+    <string name="main_error_message">Aw Snap!! Your Network seems to be Disconnected!!</string>
+    <string name="detail_activity_release_date">Release Date</string>
+    <string name="detail_activity_movie_vote_label">Votes</string>
+    <string name="detail_activity_movie_rating_label">Rating</string>
+
+
+    <string name="api_images_prefix_link">http://image.tmdb.org/t/p/w500/</string>
+    <string name="api_movie_popular_link">http://api.themoviedb.org/3/movie/popular?api_key=</string>
+    <string name="api_movie_top_rated_link">http://api.themoviedb.org/3/movie/top_rated?api_key=</string>
+
+
 </resources>

@@ -1,7 +1,7 @@
 # PopularMovies_ST1
 This is second Project in Udacity Android Nanodegree Scholarship program where a grid based movie thumbnails are displayed and on clicking on the Movie thumbnail the user gets respective details of that movie.
 
-# Scrennshots
+# Screenshots
 <table>
 <tr>  
 <td>

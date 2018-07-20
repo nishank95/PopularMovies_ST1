@@ -25,6 +25,21 @@
     <string name="api_images_prefix_link">http://image.tmdb.org/t/p/w500/</string>
     <string name="api_movie_popular_link">http://api.themoviedb.org/3/movie/popular?api_key=</string>
     <string name="api_movie_top_rated_link">http://api.themoviedb.org/3/movie/top_rated?api_key=</string>
+    <string name="api_movie_link">http://api.themoviedb.org/3/movie/</string>
+    <string name="api_key">01c0f588b93e07e631c4a65f7109f5e6</string>
+    <string name="detail_activity_movie_trailer_label">Movie Trailer\'s</string>
+    <string name="castName">Chris Pratt</string>
+    <string name="movie_cast_label">Cast</string>
+    <string name="movie_review_label">Review</string>
+    <string name="review_error_textview">No Reviews Yet!</string>
+    <string name="trailer_Error_textview">Aw Snap! You need an internet connection for this!</string>
+    <string name="cast_Error_textview">Aw Snap! You need an internet connection for this!</string>
+    <string name="movie_review_view_more">View More</string>
+    <string name="review_user_name">User Name</string>
+    <string name="favourite_movies">Favourite Movies</string>
+    <string name="fav_Error_message">Aw Snap! Toss some of the movies to your favourite list!!</string>
+    <string name="review_content">An explosive and controversial documentary that sheds new light on her tragic and perhaps inevitable fall.</string>
+    <string name="trailer_title">Trailer Title</string>
 
 
 </resources>

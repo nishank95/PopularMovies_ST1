@@ -12,5 +12,9 @@
     <color name="toolbarPrimary">#919191</color>
     <color name="toolbarPrimaryDark">#ba232323</color>
     <color name="toolbarAccent">#ffe100</color>
+    <color name="transparentColor">#00ffffff</color>
+    <color name="transparentWhiteShade">#e5ffffff</color>
+    <color name="trailerBlackTransparent">#63000000</color>
+    <color name="lightBorder">#fdfdfd</color>
 
 </resources>

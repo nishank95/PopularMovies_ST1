@@ -1,6 +1,7 @@
 package nishank.android.com.popularmovies_st1.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -21,6 +22,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import nishank.android.com.popularmovies_st1.DetailActivity;
+import nishank.android.com.popularmovies_st1.MainActivity;
 import nishank.android.com.popularmovies_st1.R;
 import nishank.android.com.popularmovies_st1.extras.ItemClickListener;
 import nishank.android.com.popularmovies_st1.model.Movie;
@@ -32,10 +38,8 @@ import nishank.android.com.popularmovies_st1.utils.DateUtils;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
 
-    private LayoutInflater mLayoutInflater;
     private List<Movie> mMovieObjectList;
     private Context mContext;
-    private ItemClickListener mItemClickListener;
 
     public MovieAdapter(Context c, List<Movie> movies){
         mContext = c;
@@ -79,27 +83,22 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         return mMovieObjectList.size();
     }
 
-    public void setClickListener(ItemClickListener itemClickListener){
-        mItemClickListener = itemClickListener;
-    }
-
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-        TextView movieTitle, movieYear;
-        ImageView moviePoster;
+        @BindView(R.id.movieTitle)TextView movieTitle;
+        @BindView(R.id.movieYear)TextView movieYear;
+        @BindView(R.id.moviePoster) ImageView moviePoster;
+
         ViewHolder(View itemView) {
             super(itemView);
-            movieTitle = itemView.findViewById(R.id.movieTitle);
-            movieYear = itemView.findViewById(R.id.movieYear);
-            moviePoster =itemView.findViewById(R.id.moviePoster);
-            itemView.setOnClickListener(this);
+            ButterKnife.bind(this,itemView);
         }
 
-        @Override
-        public void onClick(View view) {
-            if(mItemClickListener != null){
-             mItemClickListener.onClick(view, getAdapterPosition());
-            }
+        @OnClick
+        public void onClick(View view){
+            Intent launchDetailActivity = new Intent(mContext,DetailActivity.class);
+            launchDetailActivity.putExtra("Movie", mMovieObjectList.get(getAdapterPosition()));
+            mContext.startActivity(launchDetailActivity);
         }
     }
 
